@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Sponsor</title>
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Font Awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+/* ================== CSS VARIABLES ================== */
+:root {
+  --primary: #2bb884;
+  --secondary: #0a415c;
+  --light-bg: #f9fafb;
+  --text-dark: #0a415c;
+  --text-muted: #3a5b63;
+  --white: #ffffff;
+}
+*{
+  font-family: "Montserrat";
+}
+/* ================== PROSPECTUS SECTION ================== */
+.prospectus-section {
+
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prospectus-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;}
+
+.prospectus-image {
+  margin-top: -40px;
+  width: 200%;
+  max-width: 1000px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transform: scale(0.5);
+  animation: scaleUp 1s ease forwards;
+}
+/* Background div for button */
+.prospectus-btn-div {
+  width: 90vw;             
+  max-width: none;          
+  height: 100px;           
+  background: url("https://www.theladders.com/wp-content/uploads/handshake_190617.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 -10vw;          
+  overflow: hidden;         
+}
+
+
+/* Prospectus button */
+.prospectus-btn {
+  padding: 10px 10px;      
+  border-radius: 10px;     
+  background: #2bb884;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+.prospectus-btn:hover {
+  background: #0a415c;      
+  transform: scale(1.05);   
+}
+
+
+/* ===== Animations ===== */
+@keyframes scaleUp {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ================== BENEFITS SECTION ================== */
+
+.sponsor-benefits {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sponsor-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../images/image.png') center top / 100% auto no-repeat;
+  filter: blur(1px);
+  opacity: 0.2;
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.sponsor-benefits > .container {
+  position: relative;
+  z-index: 1;
+}
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.benefits-title {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+    color: #0a415c;
+
+}
+
+/* Grid: 2 per row */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Benefit card */
+.benefit-card {
+  background: #fff;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0; 
+  cursor: pointer;
+
+
+ transition: 
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;}
+
+/* Hover effect: scale down + color change */
+.benefit-card:hover {
+  background: linear-gradient(to bottom, #0a4360, #2bb884);
+  color: #fff;
+  transform: scale(0.93); 
+}
+.scroll-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+/* When visible on scroll */
+.scroll-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll animations: combine translateX and fade */
+.animate-left {
+  transform: translateX(-50px) scale(1);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.animate-right {
+  transform: translateX(50px) scale(1);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.scroll-animate.in-view.animate-left,
+.scroll-animate.in-view.animate-right {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+/* Card content */
+.benefit-card i {
+  font-size: 2rem;
+  color: #2bb884;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+/* Full width card */
+.lastcard.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ================== SPONSOR SECTION ================== */
+.sponsor-section {
+  position: relative;
+  padding: 100px 150px;
+  text-align: center;
+  background: url('../images/image.png') center top / cover no-repeat;
+  font-family: "Montserrat";
+}
+.sponsor-section h2,h3{
+color:var(--secondary);
+ font-size: 2.5rem;
+}
+.sponsor-section h3{
+   font-size: 1.5rem;
+
+}
+
+/* ================== GENERAL PLANS GRID ================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  grid-auto-rows: 1fr; 
+  margin-bottom: 80px;
+}
+.tick-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;      
+}
+
+.tick-list li {
+  display: flex;        
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.tick-list li i {
+  color: #fefffe;
+  margin-top: 4px;     
+}
+
+/* ================== EVENT IN-KIND (2 CARDS ROW) ================== */
+.event-kind {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 420px));
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+  grid-auto-rows: 1fr;
+}
+
+/* ================== CARD ================== */
+.card {
+  background: linear-gradient(145deg, var(--secondary), var(--primary));
+  color: var(--white);
+  padding: 70px 10px;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+.card:hover {
+ transform: scale(0.95);
+}
+
+/* ================== TYPOGRAPHY ================== */
+.card h4 {
+  font-size: 1.7rem;
+
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 25px 0;
+    color:#FAFA33
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+   flex-grow: 1;
+}
+
+.card li {
+  margin-bottom: 14px;
+}
+
+.card button {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid white;
+  border-radius: 18px;
+  background: var(--secondary);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: var(--primary);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1100px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-kind {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor-section {
+    padding: 80px 40px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================== SPONSOR CONTACT SECTION ================== */
+
+.sponsor-contact-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Hurry up heading */
+.contact-title {
+  text-align: center;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* Supporting text */
+.contact-text {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+ .one {
+    font-size: 1.2rem;   
+
+}
+
+/* Email link (NOT a button) */
+.contact-mail {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e6bff;       
+  text-decoration: none;
+}
+
+.contact-mail:hover {
+  text-decoration: underline;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Header container to be loaded dynamically -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="become-sponsor-hero">
+      <div class="container">
+        <!-- Main Title -->
+        <h1 class="title">Become a Sponsor</h1>
+
+        <!-- Breadcrumb navigation -->
+        <ul class="breadcrumb">
+          <li class="scroll-animate animate-up delay-1">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="scroll-animate animate-up delay-2">
+            <i class="fas fa-chevron-right"></i>
+          </li>
+          <li class="scroll-animate animate-up delay-3">Become a Sponsor</li>
+        </ul>
+
+        <!-- Hero subtitle -->
+        <p class="hero-subtext">
+          Join us in driving innovation and supporting upcoming projects. Learn
+          how you can contribute as a sponsor.
+        </p>
+      </div>
+    </section>
+
+   <!-- Sponsorship Prospectus Section -->
+<section class="prospectus-section">
+  <div class="prospectus-container">
+    <!-- Big centered image -->
+    <img
+      src="https://ieeeyesist12.org/wp-content/uploads/elementor/thumbs/3-qzf3kq7ztl7fc451hbbxepli5l4cl53nzkpwikc8u0.png"
+      alt="Sponsorship Prospectus"
+      class="prospectus-image"
+    />
+
+    <!-- Button inside background div -->
+    <div class="prospectus-btn-div">
+      <a
+        href="https://ieeeyesist12.org/pdf/?id=2025-Sponsorship-Prospectus"
+        target="_blank"
+        class="prospectus-btn"
+      >
+        Click Here to View the Sponsorship Prospectus
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================== BENEFITS SECTION ================== -->
+<section
+
+ class="sponsor-benefits">
+ <!-- Section Heading -->
+    <h2 class="benefits-title scroll-animate animate-fade delay-1">
+      What Will the Sponsors Get?
+    </h2>
+  <div class="sponsor-bg"></div>
+  <div class="container">
+    
+
+    <!-- Benefits Grid -->
+    <div class="benefits-grid">
+      <!-- Card 1 -->
+       <div class="scroll-animate animate-left delay-2">
+<div class="benefit-card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Brand Visibility</h3>
+        <p>Gain recognition through event banners, media coverage, and promotions.</p>
+      </div>
+       </div>
+   <!-- Card 2 -->
+     
+      <div class="scroll-animate animate-right delay-3">
+ <div class="benefit-card ">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Nurture Social Responsibility</h3>
+        <p>Be part of meaningful initiatives that inspire global innovation.</p>
+      </div>
+      </div>
+
+   
+
+      <!-- Card 3 -->
+
+
+      <div class="scroll-animate animate-left delay-4">
+<div class="benefit-card">
+        <i class="fas fa-microchip"></i>
+        <h3>Promote Your Technology</h3>
+        <p>Showcase your latest products to a diverse audience of innovators.</p>
+      </div>
+      </div>
+      
+
+      <!-- Card 4 -->
+       <div class="scroll-animate animate-right delay-5">
+ <div class="benefit-card ">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Be a Mentor for Innovators</h3>
+        <p>Guide young minds and shape the next generation of problem solvers.</p>
+      </div>
+       </div>
+     
+
+      <!-- Card 5 -->
+       <div class="scroll-animate animate-left delay-6" >
+
+<div class="benefit-card">
+        <i class="fas fa-globe"></i>
+        <h3>Discover International Talents</h3>
+        <p>Connect with bright individuals from across the globe.</p>
+      </div>
+       </div>
+      
+   <!-- Card 6 -->
+       <div class="scroll-animate animate-right delay-7">
+<div class="benefit-card scroll-animate animate-right delay-7">
+        <i class="fas fa-handshake"></i>
+        <h3>Share Your CSR Vision</h3>
+        <p>Showcase your values to a vibrant local and global audience.</p>
+      </div>
+       </div>
+   
+      
+
+      <!-- Card 7 (full width) -->
+
+      <div class=" lastcard full-width scroll-animate animate-left delay-8 ">
+ <div class="benefit-card ">
+        <i class="fas fa-tv"></i>
+        <h3>International Media Exposure</h3>
+        <p>Feature in promotional campaigns and international coverage worldwide.</p>
+      </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+ 
+<section class="sponsor-section">
+  <div class="container">
+
+    <h2 class ="scroll-animate animate-left delay-3">Sponsor Packages</h2>
+
+    <h3 class="section-title scroll-animate animate-right delay-3">
+       General Plans
+    </h3>
+
+    <!-- GENERAL PLANS -->
+    <div class="cards-grid">
+      <div class="card">
+        <h4><i class="fas fa-crown"></i> Platinum</h4>
+        <p class="price">$10000</p>
+  <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, Posters, Social Media & Event Banners)</li>
+  <li><i class="fas fa-check-circle"></i> Keynote Speakers / Jury Participation (2)</li>
+  <li><i class="fas fa-check-circle"></i> Promotional Stalls at YESIST12 Finals</li>
+  <li><i class="fas fa-check-circle"></i> Pre-Event / Event Workshop to Promote Technology</li>
+  <li><i class="fas fa-check-circle"></i> Track Prizes: 2</li>
+</ul>
+
+
+        <button>Contact Us</button>
+      </div>
+
+      <div class="card">
+        <h4><i class="fas fa-medal"></i> Gold</h4>
+        <p class="price">$8000</p>
+        <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, Posters, Social Media & Event Banners)</li>
+  <li><i class="fas fa-check-circle"></i> Keynote Speakers / Jury Participation (1)</li>
+  <li><i class="fas fa-check-circle"></i> Promotional Stalls at YESIST12 Finals</li>
+  <li><i class="fas fa-check-circle"></i> Pre-Event / Event Workshop to Promote Technology</li>
+  <li><i class="fas fa-check-circle"></i> Track Prizes: 1</li>
+</ul>
+
+        <button>Contact Us</button>
+      </div>
+
+      <div class="card">
+        <h4><i class="fas fa-medal"></i> Silver</h4>
+        <p class="price">$5000</p>
+     <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, All Posters, Social Media & Event Banners)</li>
+  <li><i class="fas fa-check-circle"></i> Keynote Speakers / Jury Participation (1)</li>
+  <li><i class="fas fa-check-circle"></i> Promotional Stalls at YESIST12 Finals</li>
+  <li><i class="fas fa-check-circle"></i> Pre-Event / Event Workshop to Promote Technology</li>
+  <li><i class="fas fa-check-circle"></i> Dedicated Named-Track Prizes (1)</li>
+</ul>
+
+        <button>Contact Us</button>
+      </div>
+
+      <div class="card">
+        <h4><i class="fas fa-medal"></i> Bronze</h4>
+        <p class="price">$3000</p>
+     <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, Social Media & Event Banners – Excluding All Posters)</li>
+  <li><i class="fas fa-check-circle"></i> Keynote Speakers / Jury Participation (1)</li>
+  <li><i class="fas fa-check-circle"></i> Promotional Stalls at YESIST12 Finals</li>
+  <li><i class="fas fa-check-circle"></i> Pre-Event / Event Workshop to Promote Technology</li>
+  <li><i class="fas fa-check-circle"></i> Dedicated Named-Track Prizes</li>
+</ul>
+
+
+        <button>Contact Us</button>
+      </div>
+
+      <div class="card">
+        <h4><i class="fas fa-gift"></i> Premium</h4>
+        <p class="price">$5000</p>
+       <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, Social Media & Event Banners — Excluding All Posters)</li>
+  <li><i class="fas fa-check-circle"></i> Food & Water (Lunch and Dinner)</li>
+  <li><i class="fas fa-check-circle"></i> Transport (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Accommodation (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Registration Packs (Executive Bags, Files, Notepad, Pens)</li>
+  <li><i class="fas fa-check-circle"></i> Swag Gifts (T-shirts, Goodies, Momentos)</li>
+</ul>
+
+        <button>Contact Us</button>
+      </div>
+
+      <div class="card">
+        <h4><i class="fas fa-user-tie"></i> Executive</h4>
+        <p class="price">$2500</p>
+      <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, Social Media & Event Banners — Excluding All Posters)</li>
+  <li><i class="fas fa-check-circle"></i> Food & Water (Lunch and Dinner)</li>
+  <li><i class="fas fa-check-circle"></i> Transport (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Accommodation (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Registration Packs (Executive Bags, Files, Notepad, Pens)</li>
+  <li><i class="fas fa-check-circle"></i> Swag Gifts (T-shirts, Goodies, Momentos)</li>
+</ul>
+
+        <button>Contact Us</button>
+      </div>
+    </div>
+
+    <!-- EVENT IN-KIND -->
+    <h3 class="section-title scroll-animate animate-left delay-3">
+       Event In-Kind
+    </h3>
+
+    <div class="event-kind">
+      <div class="card">
+        <h4><i class="fas fa-crown"></i> Platinum</h4>
+        <p class="price">$5000</p>
+      <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, All Posters, Social Media & Event Banners)</li>
+  <li><i class="fas fa-check-circle"></i> Food & Water (Lunch and Dinner)</li>
+  <li><i class="fas fa-check-circle"></i> Transport (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Accommodation (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Registration Packs (Executive Bags, Files, Notepad, Pens)</li>
+  <li><i class="fas fa-check-circle"></i> Swag Gifts (T-shirts, Goodies, Momentos)</li>
+</ul>
+
+        <button>Contact Us</button>
+      </div>
+
+      <div class="card">
+        <h4><i class="fas fa-user-tie"></i> Executive</h4>
+        <p class="price">$2500</p>
+     <ul class="tick-list">
+  <li><i class="fas fa-check-circle"></i> Digital Promotional Perks (Website, Social Media & Event Banners — Excluding All Posters)</li>
+  <li><i class="fas fa-check-circle"></i> Food & Water (Lunch and Dinner)</li>
+  <li><i class="fas fa-check-circle"></i> Transport (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Accommodation (For Committee Members and Guests)</li>
+  <li><i class="fas fa-check-circle"></i> Registration Packs (Executive Bags, Files, Notepad, Pens)</li>
+  <li><i class="fas fa-check-circle"></i> Swag Gifts (T-shirts, Goodies, Momentos)</li>
+</ul>
+
+        <button>Contact Us</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- FAQs Section -->
+    <section class="faqs-section">
+      <div class="container">
+        <!-- FAQs heading -->
+        <h2 class="section-heading">FAQs:</h2>
+
+        <!-- Individual FAQ item -->
+        <div class="faq-item">
+          <div class="faq-question">
+            1. What is the purpose of sponsoring YESIST12?
+          </div>
+          <div class="faq-answer">
+            Sponsoring the event provides a unique opportunity to showcase your
+            brand to a targeted audience within the industry and community. By
+            aligning your brand with our event, you gain visibility,
+            credibility, and the chance to connect directly with your target
+            audience.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            2. What types of sponsorship opportunities are available?
+          </div>
+          <div class="faq-answer">
+            We offer various packages such as Platinum Sponsor, Gold Sponsor,
+            Silver Sponsor, and Bronze Sponsor, along with customizable options
+            to fit different budgets and goals.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">3. How can I become a sponsor?</div>
+          <div class="faq-answer">
+            Review the prospectus, identify your preferred package, and contact
+            our team at
+            <a href="mailto:sponsorship@ieeeyesist12.org"
+              >sponsorship@ieeeyesist12.org</a
+            >
+            to secure your sponsorship.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            4. What is the expected ROI for sponsors?
+          </div>
+          <div class="faq-answer">
+            Sponsors can expect increased brand visibility, direct access to a
+            targeted audience, networking opportunities, and recognition as a
+            supporter.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            5. Are there opportunities for in-kind sponsorships?
+          </div>
+          <div class="faq-answer">
+            Yes, we welcome in-kind sponsorships. Contact our team to explore
+            options for integrating your products or services.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">6. How will sponsors be recognized?</div>
+          <div class="faq-answer">
+            Sponsors receive visibility through digital promotion, marketing
+            materials, social media, promotional stalls, workshops, and keynote
+            speakers. Recognition level varies by package.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">7. Can sponsors attend the event?</div>
+          <div class="faq-answer">
+            Yes, sponsors typically receive complimentary passes or discounted
+            rates.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            8. How can I get more information or discuss sponsorship details?
+          </div>
+          <div class="faq-answer">
+            Contact our sponsorship team at
+            <a href="mailto:sponsorship@ieeeyesist12.org"
+              >sponsorship@ieeeyesist12.org</a
+            >
+            for additional information and to tailor a sponsorship package that
+            suits your goals.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Sponsor Contact Section -->
+<section class="sponsor-contact-section scroll-animate animate-zoom-in">
+  <div class="container">
+    
+    <h1 class="contact-title scroll-animate animate-fade">
+      Hurry up!
+    </h1>
+
+    <p class="contact-text one  scroll-animate animate-fade delay-3">
+      Reserve your turn now to support the innovators and budding
+      entrepreneurs all over the world
+    </p>
+
+    <p class="contact-text">
+      For any queries or to get a customized package, kindly reach out to us
+    </p>
+
+    <a
+      href="mailto:sponsorship@ieeeyesist12.org"
+      class="contact-mail scroll-animate animate-up"
+    >
+      sponsorship@ieeeyesist12.org
+    </a>
+
+  </div>
+</section>
+
+    <!-- Footer container to be loaded dynamically -->
+    <div id="footer-container"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

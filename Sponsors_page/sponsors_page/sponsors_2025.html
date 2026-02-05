@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sponsors 2024</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* ---------------- .full-banner Section ---------------- */
+.full-banner {
+  width: 100%;
+  padding: 100px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #0a415c;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.full-banner h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.full-banner img {
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.full-banner img:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Responsive Styles ---------- */
+
+/* Tablets (width ≤ 992px) */
+@media (max-width: 992px) {
+  .full-banner {
+    padding: 80px 20px;
+  }
+  .full-banner h2 {
+    font-size: 2.4rem;
+  }
+  .full-banner img {
+    width: 85%;
+  }
+}
+
+/* Large Mobiles (width ≤ 768px) */
+@media (max-width: 768px) {
+  .full-banner {
+    padding: 70px 15px;
+  }
+  .full-banner h2 {
+    font-size: 2rem;
+  }
+  .full-banner img {
+    width: 90%;
+  }
+}
+
+/* Small Mobiles (width ≤ 576px) */
+@media (max-width: 576px) {
+  .full-banner {
+    padding: 60px 10px;
+  }
+  .full-banner h2 {
+    font-size: 1.6rem;
+  }
+  .full-banner img {
+    width: 95%;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+
+    <div id="header-container"></div>
+
+    <!-- Sponsors 2025 Hero Section -->
+    <section class="sponsors-hero">
+      <div class="container">
+        <h1 class="title">Sponsors 2025</h1>
+
+        <ul class="breadcrumb">
+          <li class="scroll-animate animate-up delay-1">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="scroll-animate animate-up delay-2">
+            <i class="fas fa-chevron-right"></i>
+          </li>
+          <li class="scroll-animate animate-up delay-3">Sponsors 2025</li>
+        </ul>
+
+        <p class="hero-subtext">
+          Meet our 2025 sponsors who continue to empower innovation and support
+          our initiatives.
+        </p>
+      </div>
+    </section>
+
+    <section class="full-banner sponsors-banner">
+      <h2 class="title scroll-animate animate-up">OUR SPONSORS</h2>
+
+      <img
+        src="https://ieeeyesist12.org/sponsors-2025/sponsor-1.png"
+        class="title scroll-animate animate-fade"
+        alt="Our Sponsors Banner"
+      />
+    </section>
+
+    <section class="full-banner partners-banner">
+      <h2 class="title scroll-animate animate-up">OUR PARTNERS</h2>
+
+      <img
+        src="https://ieeeyesist12.org/sponsors-2025/partner.png"
+        class="title scroll-animate animate-up"
+        alt="Our Partners Banner"
+      />
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
